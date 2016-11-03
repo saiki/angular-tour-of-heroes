@@ -1,8 +1,13 @@
 <md-card *ngIf="hero">
     <md-card-title>{{hero.name}} details!</md-card-title>
-    <div><label>id: </label>{{hero.id}}</div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-    </div>
+    <md-card-content>
+        <div><label>id: </label>{{hero.id}}</div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="hero.name" placeholder="name"/>
+        </div>
+    </md-card-content>
+    <md-card-actions>
+        <button (click)="goBack()" md-raised-button>Back</button>
+    </md-card-actions>
 </md-card>
