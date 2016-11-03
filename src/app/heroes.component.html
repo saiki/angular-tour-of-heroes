@@ -1,4 +1,10 @@
 <h2>My Heroes</h2>
+<div>
+  <label>Hero name:</label> <md-input #heroName placeholder="name"></md-input>
+  <button (click)="add(heroName.value); heroName.value=''" md-raised-button>
+    Add
+  </button>
+</div>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
